@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterweather/models/weather_model.dart';
 import 'package:flutterweather/services/weather_service.dart';
+import 'package:lottie/lottie.dart';
 
 class WeatherPage extends StatefulWidget {
   const WeatherPage({super.key});
@@ -56,6 +57,9 @@ _fetchWeather() async {
           children: [
             //city name
             Text(_weather?.cityName ?? "Loading city.."),
+
+            //animation
+            Lottie.asset('assets/cloudy.json'),
         
             //temp
             Text('${_weather?.temperature.round()}°C')
